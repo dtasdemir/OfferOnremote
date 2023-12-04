@@ -93,9 +93,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.baseproject"
+    namespace "com.offeronremote"
     defaultConfig {
-        applicationId "com.baseproject"
+        applicationId "com.offeronremote"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

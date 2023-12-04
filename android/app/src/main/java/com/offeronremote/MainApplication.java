@@ -1,4 +1,4 @@
-package com.baseproject;
+package com.offeronremote;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

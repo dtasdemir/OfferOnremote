@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* BaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BaseProjectTests.m */; };
+		00E356F31AD99517003FC87E /* OfferOnremoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* OfferOnremoteTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -23,28 +23,28 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = BaseProject;
+			remoteInfo = "OfferOnremote";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* BaseProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* OfferOnremoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OfferOnremoteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* BaseProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseProjectTests.m; sourceTree = "<group>"; };
-		084C513C15EE905EE419497F /* Pods-BaseProject-BaseProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = BaseProject/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = BaseProject/AppDelegate.mm; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BaseProject/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BaseProject/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BaseProject/main.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* OfferOnremoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OfferOnremoteTests.m"; sourceTree = "<group>"; };
+		084C513C15EE905EE419497F /* Pods-OfferOnremote-OfferOnremoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfferOnremote-OfferOnremoteTests.debug.xcconfig"; path = "Target Support Files/Pods-OfferOnremote-OfferOnremoteTests/Pods-OfferOnremote-OfferOnremoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* OfferOnremote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OfferOnremote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "OfferOnremote/AppDelegate.h"; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = "OfferOnremote/AppDelegate.mm"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "OfferOnremote/Images.xcassets"; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "OfferOnremote/Info.plist"; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "OfferOnremote/main.m"; sourceTree = "<group>"; };
 		2BE353313A6ED1D6DA38EF0E /* Pods_BaseProject_BaseProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProject_BaseProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		55948ADD9D5FE8AE26547645 /* Pods-BaseProject-BaseProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.release.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.release.xcconfig"; sourceTree = "<group>"; };
-		5FCE391892595DFD548E6C09 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
-		805FF0CF26AF94350C47816B /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = BaseProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55948ADD9D5FE8AE26547645 /* Pods-OfferOnremote-OfferOnremoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfferOnremote-OfferOnremoteTests.release.xcconfig"; path = "Target Support Files/Pods-OfferOnremote-OfferOnremoteTests/Pods-OfferOnremote-OfferOnremoteTests.release.xcconfig"; sourceTree = "<group>"; };
+		5FCE391892595DFD548E6C09 /* Pods-OfferOnremote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfferOnremote.release.xcconfig"; path = "Target Support Files/Pods-OfferOnremote/Pods-OfferOnremote.release.xcconfig"; sourceTree = "<group>"; };
+		805FF0CF26AF94350C47816B /* Pods-OfferOnremote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfferOnremote.debug.xcconfig"; path = "Target Support Files/Pods-OfferOnremote/Pods-OfferOnremote.debug.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "OfferOnremote/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		CD2173E9E38F16D972C79DC4 /* Pods_BaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1A4639129FBF5F900AE8914 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "BaseProject/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E1A4639129FBF5F900AE8914 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "OfferOnremote/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -68,13 +68,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* BaseProjectTests */ = {
+		00E356EF1AD99517003FC87E /* OfferOnremoteTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* BaseProjectTests.m */,
+				00E356F21AD99517003FC87E /* OfferOnremoteTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = BaseProjectTests;
+			path = "OfferOnremoteTests";
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -85,7 +85,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* BaseProject */ = {
+		13B07FAE1A68108700A75B9A /* OfferOnremote */ = {
 			isa = PBXGroup;
 			children = (
 				E1A4639129FBF5F900AE8914 /* GoogleService-Info.plist */,
@@ -96,7 +96,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = BaseProject;
+			name = "OfferOnremote";
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -119,9 +119,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* BaseProject */,
+				13B07FAE1A68108700A75B9A /* OfferOnremote */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* BaseProjectTests */,
+				00E356EF1AD99517003FC87E /* OfferOnremoteTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -134,8 +134,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* BaseProject.app */,
-				00E356EE1AD99517003FC87E /* BaseProjectTests.xctest */,
+				13B07F961A680F5B00A75B9A /* OfferOnremote.app */,
+				00E356EE1AD99517003FC87E /* OfferOnremoteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,10 +143,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				805FF0CF26AF94350C47816B /* Pods-BaseProject.debug.xcconfig */,
-				5FCE391892595DFD548E6C09 /* Pods-BaseProject.release.xcconfig */,
-				084C513C15EE905EE419497F /* Pods-BaseProject-BaseProjectTests.debug.xcconfig */,
-				55948ADD9D5FE8AE26547645 /* Pods-BaseProject-BaseProjectTests.release.xcconfig */,
+				805FF0CF26AF94350C47816B /* Pods-OfferOnremote.debug.xcconfig */,
+				5FCE391892595DFD548E6C09 /* Pods-OfferOnremote.release.xcconfig */,
+				084C513C15EE905EE419497F /* Pods-OfferOnremote-OfferOnremoteTests.debug.xcconfig */,
+				55948ADD9D5FE8AE26547645 /* Pods-OfferOnremote-OfferOnremoteTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -154,9 +154,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* BaseProjectTests */ = {
+		00E356ED1AD99517003FC87E /* OfferOnremoteTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BaseProjectTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "OfferOnremoteTests" */;
 			buildPhases = (
 				E8FB726AB7D3BDD767F485ED /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -170,14 +170,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = BaseProjectTests;
-			productName = BaseProjectTests;
-			productReference = 00E356EE1AD99517003FC87E /* BaseProjectTests.xctest */;
+			name = OfferOnremoteTests;
+			productName = OfferOnremoteTests;
+			productReference = 00E356EE1AD99517003FC87E /* OfferOnremoteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* BaseProject */ = {
+		13B07F861A680F5B00A75B9A /* OfferOnremote */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "BaseProject" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "OfferOnremote" */;
 			buildPhases = (
 				DB5C94391212EB9DEE720AC3 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -194,9 +194,9 @@
 			);
 			dependencies = (
 			);
-			name = BaseProject;
-			productName = BaseProject;
-			productReference = 13B07F961A680F5B00A75B9A /* BaseProject.app */;
+			name = "OfferOnremote";
+			productName = "OfferOnremote";
+			productReference = 13B07F961A680F5B00A75B9A /* OfferOnremote.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +216,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "BaseProject" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "OfferOnremote" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -229,8 +229,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* BaseProject */,
-				00E356ED1AD99517003FC87E /* BaseProjectTests */,
+				13B07F861A680F5B00A75B9A /* OfferOnremote */,
+				00E356ED1AD99517003FC87E /* OfferOnremoteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -278,15 +278,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseProject/Pods-BaseProject-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-OfferOnremote/Pods-OfferOnremote-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseProject/Pods-BaseProject-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-OfferOnremote/Pods-OfferOnremote-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseProject/Pods-BaseProject-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OfferOnremote/Pods-OfferOnremote-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		09737C4F40F7B46B9B6087F2 /* [CP] Embed Pods Frameworks */ = {
@@ -295,15 +295,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseProject/Pods-BaseProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-OfferOnremote/Pods-OfferOnremote-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseProject/Pods-BaseProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-OfferOnremote/Pods-OfferOnremote-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseProject/Pods-BaseProject-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OfferOnremote/Pods-OfferOnremote-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		335A0506A79B5D39532E2AC0 /* [CP] Copy Pods Resources */ = {
@@ -312,15 +312,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-OfferOnremote-OfferOnremoteTests/Pods-OfferOnremote-OfferOnremoteTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-OfferOnremote-OfferOnremoteTests/Pods-OfferOnremote-OfferOnremoteTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OfferOnremote-OfferOnremoteTests/Pods-OfferOnremote-OfferOnremoteTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5391C8E9288857AD8D4AEB5B /* [CP-User] [RNFB] Crashlytics Configuration */ = {
@@ -356,15 +356,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-OfferOnremote-OfferOnremoteTests/Pods-OfferOnremote-OfferOnremoteTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-OfferOnremote-OfferOnremoteTests/Pods-OfferOnremote-OfferOnremoteTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OfferOnremote-OfferOnremoteTests/Pods-OfferOnremote-OfferOnremoteTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DB5C94391212EB9DEE720AC3 /* [CP] Check Pods Manifest.lock */ = {
@@ -382,7 +382,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BaseProject-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-OfferOnremote-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -404,7 +404,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BaseProject-BaseProjectTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-OfferOnremote-OfferOnremoteTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -437,7 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* BaseProjectTests.m in Sources */,
+				00E356F31AD99517003FC87E /* OfferOnremoteTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +455,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* BaseProject */;
+			target = 13B07F861A680F5B00A75B9A /* OfferOnremote */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -463,14 +463,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 084C513C15EE905EE419497F /* Pods-BaseProject-BaseProjectTests.debug.xcconfig */;
+			baseConfigurationReference = 084C513C15EE905EE419497F /* Pods-OfferOnremote-OfferOnremoteTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = BaseProjectTests/Info.plist;
+				INFOPLIST_FILE = "OfferOnremoteTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -482,19 +482,19 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.baseproject;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.offeronremote";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaseProject.app/BaseProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OfferOnremote.app/OfferOnremote";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55948ADD9D5FE8AE26547645 /* Pods-BaseProject-BaseProjectTests.release.xcconfig */;
+			baseConfigurationReference = 55948ADD9D5FE8AE26547645 /* Pods-OfferOnremote-OfferOnremoteTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = BaseProjectTests/Info.plist;
+				INFOPLIST_FILE = "OfferOnremoteTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -506,22 +506,23 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.baseproject;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.offeronremote";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BaseProject.app/BaseProject";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OfferOnremote.app/OfferOnremote";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 805FF0CF26AF94350C47816B /* Pods-BaseProject.debug.xcconfig */;
+			baseConfigurationReference = 805FF0CF26AF94350C47816B /* Pods-OfferOnremote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = BaseProject/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = BaseProject;
+				INFOPLIST_FILE = "OfferOnremote/Info.plist";
+             INFOPLIST_KEY_CFBundleDisplayName = "Offer Onremote";
+				INFOPLIST_KEY_CFBundleDisplayName = OfferOnremote;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -532,8 +533,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.baseproject;
-				PRODUCT_NAME = BaseProject;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.offeronremote";
+				PRODUCT_NAME = "OfferOnremote";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
@@ -546,13 +547,14 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FCE391892595DFD548E6C09 /* Pods-BaseProject.release.xcconfig */;
+			baseConfigurationReference = 5FCE391892595DFD548E6C09 /* Pods-OfferOnremote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = BaseProject/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = BaseProject;
+				INFOPLIST_FILE = "OfferOnremote/Info.plist";
+             INFOPLIST_KEY_CFBundleDisplayName = "Offer Onremote";
+				INFOPLIST_KEY_CFBundleDisplayName = OfferOnremote;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -563,8 +565,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.baseproject;
-				PRODUCT_NAME = BaseProject;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.offeronremote";
+				PRODUCT_NAME = "OfferOnremote";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
@@ -714,7 +716,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BaseProjectTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "OfferOnremoteTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -723,7 +725,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "BaseProject" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "OfferOnremote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -732,7 +734,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "BaseProject" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "OfferOnremote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:715873896032:android:e07936976981fa1b98e505",
         "android_client_info": {
-          "package_name": "com.baseproject"
+          "package_name": "com.offeronremote"
         }
       },
       "oauth_client": [
@@ -34,7 +34,7 @@
               "client_id": "715873896032-dph7t16nnthgl7ags0d3qjieapapug5t.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.baseproject"
+                "bundle_id": "com.offeronremote"
               }
             }
           ]
