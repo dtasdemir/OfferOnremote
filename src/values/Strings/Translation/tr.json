@@ -120,7 +120,12 @@
     "password": "Şifre",
     "allowPush": "Bildirime İzin Ver"
   },
-  "toast": {},
+  "toast": {
+    "permissionMicrofonSucces": "Mikrofon izni verildi.",
+    "permissionMicrofonWarning": "Mikrofon izni reddedildi..",
+    "permissionMicrofonNever": "Mikrofon izin talebi reddedildi.",
+    "permissionMicrofonError": "Mikrofon izin talebi hatası alındı. Lütfen tekrar deneyiniz."
+  },
   "infoMessages": {
     "emailValidation": "Lütfen geçerli bir email adresi giriniz."
   },

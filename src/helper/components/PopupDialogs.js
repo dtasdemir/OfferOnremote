@@ -1,6 +1,7 @@
 /**
  * Created by Orhan SARIBAL on 07.06.2023
  */
+import { PermissionsAndroid } from "react-native";
 
 export const DialogType = {
   default: "default",
@@ -48,7 +49,7 @@ export function ShowDialog(dialogProps: DialogPropsInterface) {
     if (typeof __popupContext !== "undefined") {
       __popupContext.showDialog(
           dialogProps,
-          function() {
+          async function() {
             resolve();
           },
           function() {

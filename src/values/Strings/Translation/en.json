@@ -122,7 +122,12 @@
     "password": "Password",
     "allowPush": "Allow Push"
   },
-  "toast": {},
+  "toast": {
+    "permissionMicrofonSucces": "Microphone permission granted.",
+    "permissionMicrofonWarning": "Microphone permission denied.",
+    "permissionMicrofonNever": "Microphone permission request denied.",
+    "permissionMicrofonError": "Microphone permission request error received. Please try again."
+  },
   "infoMessages": {
     "emailValidation": "Your email is not valid."
   },
