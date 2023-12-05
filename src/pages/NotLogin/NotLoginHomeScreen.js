@@ -5,14 +5,11 @@ import {heightPercentageToDP as hp} from "react-native-responsive-screen";
 import {MyContainer} from "../../components/Container/Container";
 import { MyButton } from "../../components/Common/Button/MyButton";
 import { StringContext } from "../../contexts/StringContext";
-import DeviceInformation from "../../device/DeviceInformation";
 import { RequestAllPermission } from "../../helper/functions/Permission";
 
 export const NotLoginHomeScreen = (props) => {
 
     const {myStrings} = useContext(StringContext);
-
-    let recordAudio = useState(new DeviceInformation().getRecordAudio());
 
     const [isRecording, setisRecording] = useState();
 

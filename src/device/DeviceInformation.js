@@ -84,13 +84,4 @@ export default class DeviceInformation{
         };
     }
 
-    getRecordAudio() {
-        let recordAudio = SyncStorage.get("recordAudio");
-
-        if (recordAudio === true) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 }
