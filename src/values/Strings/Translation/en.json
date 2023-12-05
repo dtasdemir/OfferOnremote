@@ -171,6 +171,8 @@
     "done": "Done",
     "verify": "Verify",
     "clear": "Clear",
-    "choose": "Choose"
+    "choose": "Choose",
+    "start": "Start",
+    "stop": "Stop"
   }
 }

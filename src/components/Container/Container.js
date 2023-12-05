@@ -11,12 +11,13 @@ import {MyStatusBar} from "../StatusBar/MyStatusBar";
 import {pageStyle} from "../../values/Styles/Styles";
 import {ThemeContext} from "../../contexts/ThemeContext";
 import {LoadingContext} from "../../contexts/LoadingContext";
+import { Header } from '../Common/Header/Header';
 
 export const MyContainer = (props) => {
     const {hideLoading, isLoadingShowing} = useContext(LoadingContext);
     const {myColors} = useContext(ThemeContext);
 
-    let {statusBar, footer, errorOnPress, errorMessage, error, footerActiveIndex, navbar, title, style} = props;
+    let {statusBar, footer, errorOnPress, errorMessage, error, footerActiveIndex, header,navbar, title, style} = props;
 
     useEffect(() => {
         return () => {
@@ -52,6 +53,12 @@ export const MyContainer = (props) => {
                 <NavBar
                     title={title}/>
 
+            }
+
+            {
+                header &&
+
+                <Header />
             }
 
             <View
@@ -105,6 +112,7 @@ MyContainer.propTypes = {
     style: PropTypes.object,
     navbar: PropTypes.bool,
     footer: PropTypes.bool,
+    header: PropTypes.bool,
     title: PropTypes.string,
     statusBar: PropTypes.bool,
     footerActiveIndex: PropTypes.oneOf([0, 1, 2, 3]),
@@ -119,4 +127,5 @@ MyContainer.defaultProps = {
     title: "",
     statusBar: true,
     error: false,
+    header: false,
 };

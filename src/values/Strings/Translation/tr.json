@@ -167,6 +167,8 @@
     "done": "Tamam",
     "verify": "Doğrula",
     "clear": "Temizle",
-    "choose": "Seç"
+    "choose": "Seç",
+    "start": "Başlat",
+    "stop": "Durdur"
   }
 }
