@@ -5,9 +5,8 @@ import {heightPercentageToDP as hp} from "react-native-responsive-screen";
 import {MyContainer} from "../../components/Container/Container";
 import { MyButton } from "../../components/Common/Button/MyButton";
 import { StringContext } from "../../contexts/StringContext";
-import { ShowDialog, DialogType } from "../../helper/components/PopupDialogs";
-import { ShowToast } from "../../helper/components/Toasts";
 import DeviceInformation from "../../device/DeviceInformation";
+import { RequestAllPermission } from "../../helper/functions/Permission";
 
 export const NotLoginHomeScreen = (props) => {
 
@@ -18,42 +17,20 @@ export const NotLoginHomeScreen = (props) => {
     const [isRecording, setisRecording] = useState();
 
     function _handleStartRecording() {
-
-        if(!recordAudio) {
-          _PermissionRecordAudio()
-        } else {
-            setisRecording(true);
-        }
+        
+      RequestAllPermission()
+        .then(() => {
+            console.log("HAZIRIM");
+            setisRecording(true)
+        })
+        .catch((error) => {
+            console.log("error", error)
+        })
         
     }
 
     function _handleStopRecording() {
         setisRecording(false);
-    }
-
-    async function _PermissionRecordAudio() {
-
-        try {
-            const permission = await PermissionsAndroid.request(
-                PermissionsAndroid.PERMISSIONS.RECORD_AUDIO
-            );
-
-            console.log(myStrings.toast);
-            
-            if (permission === PermissionsAndroid.RESULTS.GRANTED) {
-                ShowToast.success(myStrings.toast.permissionMicrofonSucces);
-                SyncStorage.set("recordAudio", true);
-            } else if (permission === PermissionsAndroid.RESULTS.DENIED) {
-                ShowToast.warning(myStrings.toast.permissionMicrofonWarning);
-                SyncStorage.set("recordAudio", false);
-            } else {
-                ShowToast.error(myStrings.toast.permissionMicrofonError);
-                SyncStorage.set("recordAudio", false);
-            }
-
-        } catch (error) {
-            ShowToast.error(myStrings.toast.permissionMicrofonSucces);
-        }
     }
 
     return (
