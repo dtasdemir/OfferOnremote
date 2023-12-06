@@ -7,10 +7,15 @@ import { MyButton } from "../../components/Common/Button/MyButton";
 import { StringContext } from "../../contexts/StringContext";
 import { RequestAllPermission } from "../../helper/functions/Permission";
 import AudioRecorderPlayer from 'react-native-audio-recorder-player';
+import RNFS from 'react-native-fs'
 
 const audioRecorderPlayer = new AudioRecorderPlayer();
 
 export const NotLoginHomeScreen = (props) => {
+
+    const path = RNFS.DocumentDirectoryPath + "/test.wav" // test şuanlık sonrasında kaydederken belirlenecek
+
+    console.log("path",path)
 
     const {myStrings} = useContext(StringContext);
 
@@ -36,7 +41,7 @@ export const NotLoginHomeScreen = (props) => {
       RequestAllPermission()
         .then(() => {
 
-            audioRecorderPlayer.startRecorder().then((e) => {
+            audioRecorderPlayer.startRecorder(path).then((e) => {
 
                 updateAudioData("isRecording", true);
 
