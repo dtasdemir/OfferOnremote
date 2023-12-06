@@ -8,42 +8,48 @@ import { StringContext } from "../../contexts/StringContext";
 import { RequestAllPermission } from "../../helper/functions/Permission";
 import AudioRecorderPlayer from 'react-native-audio-recorder-player';
 
-export const NotLoginHomeScreen = (props) => {
-    const audioRecorderPlayer = new AudioRecorderPlayer();
+const audioRecorderPlayer = new AudioRecorderPlayer();
 
-    const [RecordSecs, setRecordSecs] = useState(0);
-    const [RecordTime, setRecordTime] = useState(0);
+export const NotLoginHomeScreen = (props) => {
 
     const {myStrings} = useContext(StringContext);
 
-    const [isRecording, setisRecording] = useState();
+    const [AudioData, setAudioData] = useState({
+        RecordSecs: 0,
+        RecordTime: '00:00:00',
+        CurrentSecs: 0,
+        CurrentTime: '00:00:00',
+        isRecording: null,
+        isPlaying: null,
+    })
 
-    const _handleStartRecording = async = () => {
+    const updateAudioData = (key,value) => {
+        setAudioData(prev => ({
+            ...prev,
+            [key] : value,
+        }));
+    };
+
+
+    function _handleStartRecording () {
         
       RequestAllPermission()
         .then(() => {
+
             audioRecorderPlayer.startRecorder().then((e) => {
-                console.log(e)
-                setisRecording(true)
+
+                updateAudioData("isRecording", true);
+
                 audioRecorderPlayer.addRecordBackListener((res) => {
-                    console.log(res,"STARTTAN GELİYORUM");
-                    setRecordSecs(res.currentPosition);
-                    setRecordTime(audioRecorderPlayer.mmssss(Math.floor(res.currentPosition)));
+                    
+                    updateAudioData("RecordSecs", res.currentPosition);
+                    updateAudioData("RecordTime", audioRecorderPlayer.mmssss(Math.floor(res.currentPosition)))
+
                 })
-                setisRecording(true)
+
             }).catch((error) => {
                 console.log(error);
             })
-
-            // console.log(result, "START")
-
-            // audioRecorderPlayer.addRecordBackListener((e) => {
-
-            //     setRecordSecs(e.currentPosition);
-            //     setRecordTime(audioRecorderPlayer.mmssss(Math.floor(e.currentPosition)));
-            // })
-
-            // setisRecording(true)
         })
         .catch((error) => {
             console.log("error", error)
@@ -51,31 +57,58 @@ export const NotLoginHomeScreen = (props) => {
         
     }
 
-    const _handleStopRecording = () => {
+    function _handleStopRecording(){
 
-        audioRecorderPlayer.stopRecorder().then((e) => {
-            console.log(e)
-            setRecordTime(0);
-            setRecordSecs(0);
-        }).catch((error) => {
-            console.log(error);
-        })
+            audioRecorderPlayer.stopRecorder().then((response) => {
+            
+                updateAudioData("isRecording", false);
 
-        // const result = audioRecorderPlayer.stopRecorder();
+                audioRecorderPlayer.removeRecordBackListener();
 
-        // console.log(result, "STOP")
-
-        // audioRecorderPlayer.removeRecordBackListener(() => {
-        //     setRecordSecs();
-        //     setRecordTime(audioRecorderPlayer.mmssss(0));
-        // })
-        
-        // setisRecording(false);
+            })
+            
     }
 
-    useEffect(() => {
-        console.log(RecordTime);
-    }, [RecordTime])
+    function _handleStartPlayer() {
+
+        console.log(AudioData);
+
+        if( AudioData.isPlaying === "paused") {
+
+            audioRecorderPlayer.resumePlayer();
+            
+        } else {
+            audioRecorderPlayer.startPlayer();
+
+            audioRecorderPlayer.addPlayBackListener((e) => {
+
+                if( AudioData.RecordSecs <= e.currentPosition) {
+                    audioRecorderPlayer.stopPlayer();
+                }
+
+                updateAudioData("isPlaying", "started");
+                updateAudioData("CurrentSecs", e.currentPosition);
+                updateAudioData("CurrentTime", audioRecorderPlayer.mmssss(Math.floor(e.currentPosition)))
+
+            })
+        }
+        
+    }
+
+    function _handlePausePlayer() {
+
+        audioRecorderPlayer.pausePlayer();
+        
+        updateAudioData("isPlaying", "paused");
+
+    }
+
+    function _handleStopPlayer() {
+
+        audioRecorderPlayer.stopPlayer();
+        updateAudioData("isPlaying", "stoped");
+
+    }
 
     return (
         <MyContainer
@@ -86,12 +119,30 @@ export const NotLoginHomeScreen = (props) => {
         >
 
             <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
-                
-                {!isRecording ?
-                    <MyButton size="big" buttonText={myStrings.button.start} onPress={_handleStartRecording} /> :
 
-                    <MyButton size="big" buttonText={myStrings.button.stop} onPress={_handleStopRecording} />
-                }
+                { AudioData.isRecording === true && <Text>{AudioData.RecordTime}</Text> }
+
+                { AudioData.isRecording === false && <Text>{AudioData.CurrentTime}</Text> }
+
+                { AudioData.isRecording === null && <MyButton size="big" buttonText={myStrings.button.start} onPress={_handleStartRecording} /> }
+
+                { AudioData.isRecording === true && <MyButton size="big" buttonText={myStrings.button.stop} onPress={_handleStopRecording} /> }
+
+                { AudioData.isRecording === false &&
+                
+                    <View>
+
+                        <MyButton size="big" buttonText={"Oynat"} onPress={_handleStartPlayer} />
+
+                        <MyButton size="big" buttonText={"Duraklat"} onPress={_handlePausePlayer} />
+
+                        <MyButton size="big" buttonText={"Durdur"} onPress={_handleStopPlayer} />
+
+                    </View>
+
+            }
+
+
             </View>
 
         </MyContainer>
