@@ -10,6 +10,7 @@ import AudioRecorderPlayer from 'react-native-audio-recorder-player';
 import RNFS from 'react-native-fs'
 import { MyFileUploadRequest } from "../../adapter/api/MyFileUploadRequest";
 import { MyAudioContent } from "../../components/Content/MyAudioContent";
+import { MyAudioFooter } from "../../components/Footer/MyAudioFooter";
 
 const audioRecorderPlayer = new AudioRecorderPlayer();
 
@@ -26,7 +27,8 @@ export const NotLoginHomeScreen = (props) => {
         CurrentTime: '00:00',
         isRecording: false,
         isPlaying: false,
-        isVolume: false
+        isVolume: false,
+        isStopping: false,
     })
 
     const updateAudioData = (key,value) => {
@@ -126,6 +128,28 @@ export const NotLoginHomeScreen = (props) => {
         >
 
         <MyAudioContent isRecording={AudioData.isRecording} isVolume={AudioData.isVolume} />
+
+        <MyAudioFooter 
+            isRecording={AudioData.isRecording}
+            isStopping={AudioData.isStopping}
+            startRecordFunc={() => {
+                updateAudioData("isRecording", true);
+
+                updateAudioData("CurrentTime", "01:44")
+                
+                setTimeout(() => {
+                    updateAudioData("isVolume", true)
+                },1000)
+
+            }}
+            pauseRecordFunc={() => updateAudioData("isStopping", true)}
+            deleteAudioFunc={() => {
+                updateAudioData("isRecording", false)
+                updateAudioData("isVolume", false)
+            }}
+            uploadAudioFunc={() => console.error("Gönderdim")}
+
+        />
 
             {/* <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
 
