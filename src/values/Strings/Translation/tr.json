@@ -26,6 +26,8 @@
   "changeTheme": "Temayı Değiştir",
   "notifications": "Bildirimler",
   "settings": "Ayarlar",
+  "offerTitle": "Bana bir şey söyle ki teklif oluşturabileyim",
+  "listeningTitle": "Seni dinliyorum",
   "alertDialogs": {
     "warning": "Uyarı!",
     "error": "Hata!",

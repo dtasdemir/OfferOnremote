@@ -26,6 +26,8 @@
   "changePassword": "Change Password",
   "changeTheme": "Change Theme",
   "settings": "Settings",
+  "offerTitle": "Tell me something so I can create an offer",
+  "listeningTitle": "I'm listening to you",
   "alertDialogs": {
     "warning": "Warning!",
     "error": "Error!",
