@@ -2,17 +2,17 @@ import React, {useContext, useEffect, useState} from "react";
 import {Image, Text, View, TouchableOpacity} from 'react-native';
 import SyncStorage from "sync-storage";
 import {heightPercentageToDP as hp} from "react-native-responsive-screen";
-import {MyContainer} from "../../../components/Container/Container";
-import { navigate } from "../../../RootMethods/RootNavigation";
-import {LoginContext} from "../../../contexts/LoginContext";
-import {ThemeContext} from "../../../contexts/ThemeContext";
-import { MyIcon } from "../../../components/Common/VectorIcon/MyIcon";
-import { MyText } from "../../../components/Common/Text/MyText";
-import { StringContext } from "../../../contexts/StringContext";
-import { DialogType, ShowDialog } from "../../../helper/components/PopupDialogs";
-import { stringAlias } from "../../../values/Strings/Strings";
-import DeviceInformation from "../../../device/DeviceInformation";
-import { MyPicker } from "../Picker/MyPicker";
+import {MyContainer} from "../Container/Container";
+import { navigate } from "../../RootMethods/RootNavigation";
+import {LoginContext} from "../../contexts/LoginContext";
+import {ThemeContext} from "../../contexts/ThemeContext";
+import { MyIcon } from "../Common/VectorIcon/MyIcon";
+import { MyText } from "../Common/Text/MyText";
+import { StringContext } from "../../contexts/StringContext";
+import { DialogType, ShowDialog } from "../../helper/components/PopupDialogs";
+import { stringAlias } from "../../values/Strings/Strings";
+import DeviceInformation from "../../device/DeviceInformation";
+import { MyPicker } from "../Common/Picker/MyPicker";
 
 export const Header = (props) => {
     const loginContext = useContext(LoginContext);

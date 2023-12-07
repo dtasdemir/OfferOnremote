@@ -11,7 +11,7 @@ import {MyStatusBar} from "../StatusBar/MyStatusBar";
 import {pageStyle} from "../../values/Styles/Styles";
 import {ThemeContext} from "../../contexts/ThemeContext";
 import {LoadingContext} from "../../contexts/LoadingContext";
-import { Header } from '../Common/Header/Header';
+import { Header } from '../Header/Header';
 
 export const MyContainer = (props) => {
     const {hideLoading, isLoadingShowing} = useContext(LoadingContext);
