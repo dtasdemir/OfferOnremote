@@ -21,7 +21,7 @@ export const MyAudioContent = (props) => {
 
                 <Text style={{ bottom: 140, fontSize: 28, fontWeight: '700', color: myColors.titleTextColor, textAlign: 'center'}}>{myStrings.listeningTitle}</Text>
 
-                <Text style={{ bottom: 116, fontSize: 24, fontWeight: '500', color: myColors.textColor, textAlign: 'center'}}>{recordTime}</Text>
+                <Text style={{ bottom: 116, fontSize: 24, fontWeight: '500', color: myColors.textColor, textAlign: 'center'}}>{recordTime.slice(0,5)}</Text>
 
                 {isVolume ? 
 
