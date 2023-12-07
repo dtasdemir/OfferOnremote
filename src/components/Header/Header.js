@@ -99,7 +99,7 @@ export const Header = (props) => {
                     <Image
                         style={{ width: 20, height: 20, marginRight: 8}}
                         resizeMode="contain"
-                        source={LocalLanguageCode === "tr" ? require("../../../assets/image/flag_tr.png") : require("../../../assets/image/flag_en.png")} // Eğer vaktin kalırsa burada zaten flag_{languageCode}.png şeklinde bunu ayarla
+                        source={LocalLanguageCode === "tr" ? require("../../assets/image/flag_tr.png") : require("../../assets/image/flag_en.png")} // Eğer vaktin kalırsa burada zaten flag_{languageCode}.png şeklinde bunu ayarla
                     />
 
                     <MyText textStyle={{marginRight: 4}} text={LocalLanguageCode.toUpperCase()}/>
