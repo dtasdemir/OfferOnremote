@@ -8,14 +8,13 @@ import { StringContext } from "../../contexts/StringContext";
 import { RequestAllPermission } from "../../helper/functions/Permission";
 import AudioRecorderPlayer from 'react-native-audio-recorder-player';
 import RNFS from 'react-native-fs'
+import { MyFileUploadRequest } from "../../adapter/api/MyFileUploadRequest";
 
 const audioRecorderPlayer = new AudioRecorderPlayer();
 
 export const NotLoginHomeScreen = (props) => {
 
-    const path = RNFS.DocumentDirectoryPath + "/test.wav" // test şuanlık sonrasında kaydederken belirlenecek
-
-    console.log("path",path)
+    const path = RNFS.DocumentDirectoryPath + "/test.wav" // şuanlık dosya ismi test sonrasında kaydederken belirlenecek // Bu dosyayı kontrol ettim ve var 
 
     const {myStrings} = useContext(StringContext);
 
@@ -70,6 +69,7 @@ export const NotLoginHomeScreen = (props) => {
 
                 audioRecorderPlayer.removeRecordBackListener();
 
+                MyFileUploadRequest("test.wav", "http://localhost:8081", response );
             })
             
     }
@@ -144,9 +144,7 @@ export const NotLoginHomeScreen = (props) => {
                         <MyButton size="big" buttonText={"Durdur"} onPress={_handleStopPlayer} />
 
                     </View>
-
-            }
-
+                }
 
             </View>
 
