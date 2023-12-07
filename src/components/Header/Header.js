@@ -48,7 +48,7 @@ export const Header = (props) => {
 
     return (
         <>
-        <View style={{ flexDirection: 'row', alignItems: 'center', padding: 16}}>
+        <View style={{ flexDirection: 'row', alignItems: 'center', padding: 16, flex: 1/8}}>
 
                 <MyIcon 
                     iconGroup={"Feather"}

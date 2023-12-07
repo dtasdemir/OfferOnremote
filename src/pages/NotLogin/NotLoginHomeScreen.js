@@ -9,6 +9,7 @@ import { RequestAllPermission } from "../../helper/functions/Permission";
 import AudioRecorderPlayer from 'react-native-audio-recorder-player';
 import RNFS from 'react-native-fs'
 import { MyFileUploadRequest } from "../../adapter/api/MyFileUploadRequest";
+import { MyAudioContent } from "../../components/Content/MyAudioContent";
 
 const audioRecorderPlayer = new AudioRecorderPlayer();
 
@@ -20,11 +21,12 @@ export const NotLoginHomeScreen = (props) => {
 
     const [AudioData, setAudioData] = useState({
         RecordSecs: 0,
-        RecordTime: '00:00:00',
+        RecordTime: '00:00',
         CurrentSecs: 0,
-        CurrentTime: '00:00:00',
-        isRecording: null,
-        isPlaying: null,
+        CurrentTime: '00:00',
+        isRecording: false,
+        isPlaying: false,
+        isVolume: false
     })
 
     const updateAudioData = (key,value) => {
@@ -123,7 +125,9 @@ export const NotLoginHomeScreen = (props) => {
             header={true}
         >
 
-            <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
+        <MyAudioContent isRecording={AudioData.isRecording} isVolume={AudioData.isVolume} />
+
+            {/* <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
 
                 { AudioData.isRecording === true && <Text>{AudioData.RecordTime}</Text> }
 
@@ -146,7 +150,7 @@ export const NotLoginHomeScreen = (props) => {
                     </View>
                 }
 
-            </View>
+            </View> */}
 
         </MyContainer>
     );
