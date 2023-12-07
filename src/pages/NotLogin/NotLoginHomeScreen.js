@@ -12,12 +12,17 @@ import { MyFileUploadRequest } from "../../adapter/api/MyFileUploadRequest";
 import { MyAudioContent } from "../../components/Content/MyAudioContent";
 import { MyAudioFooter } from "../../components/Footer/MyAudioFooter";
 import { ShowToast } from "../../helper/components/Toasts";
+import { LoginContext } from "../../contexts/LoginContext";
 
 const audioRecorderPlayer = new AudioRecorderPlayer();
 
 export const NotLoginHomeScreen = (props) => {
 
+    const loginContext = useContext(LoginContext);
+
     const path = RNFS.DocumentDirectoryPath + "/test.wav" // şuanlık dosya ismi test sonrasında kaydederken belirlenecek // Bu dosyayı kontrol ettim ve var 
+
+    let isLogin = LoginContext.isLogin;
 
     const {myStrings} = useContext(StringContext);
 
@@ -82,7 +87,9 @@ export const NotLoginHomeScreen = (props) => {
 
     function _handleUploadRecording(){
 
-        _handlePauseRecording();
+        if (isLogin) {
+
+            _handlePauseRecording();
 
             audioRecorderPlayer.stopRecorder()
                 .then((response) => {
@@ -95,6 +102,14 @@ export const NotLoginHomeScreen = (props) => {
                     console.error(error);
                     updateAudioData("isRecording", false);
                 })
+
+        } else {
+            audioRecorderPlayer.stopRecorder()
+            
+            ShowToast.error("Ses dosyanızı göndermek için giriş yapmalısınız", 3000); // Bunu stringlere yaz
+        }
+
+        
             
     }
 
