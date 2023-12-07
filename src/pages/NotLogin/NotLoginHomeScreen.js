@@ -11,6 +11,7 @@ import RNFS from 'react-native-fs'
 import { MyFileUploadRequest } from "../../adapter/api/MyFileUploadRequest";
 import { MyAudioContent } from "../../components/Content/MyAudioContent";
 import { MyAudioFooter } from "../../components/Footer/MyAudioFooter";
+import { ShowToast } from "../../helper/components/Toasts";
 
 const audioRecorderPlayer = new AudioRecorderPlayer();
 
@@ -22,9 +23,9 @@ export const NotLoginHomeScreen = (props) => {
 
     const [AudioData, setAudioData] = useState({
         RecordSecs: 0,
-        RecordTime: '00:00',
+        RecordTime: '00:00:00',
         CurrentSecs: 0,
-        CurrentTime: '00:00',
+        CurrentTime: '00:00:00',
         isRecording: false,
         isPlaying: false,
         isVolume: false,
@@ -44,20 +45,28 @@ export const NotLoginHomeScreen = (props) => {
       RequestAllPermission()
         .then(() => {
 
-            audioRecorderPlayer.startRecorder(path).then((e) => {
+            if ( AudioData.isStopping) {
+                
+                audioRecorderPlayer.resumeRecorder();
 
-                updateAudioData("isRecording", true);
+                updateAudioData("isStopping", false);
 
-                audioRecorderPlayer.addRecordBackListener((res) => {
-                    
-                    updateAudioData("RecordSecs", res.currentPosition);
-                    updateAudioData("RecordTime", audioRecorderPlayer.mmssss(Math.floor(res.currentPosition)))
+            } else {
+                audioRecorderPlayer.startRecorder(path).then((e) => {
 
+                    updateAudioData("isRecording", true);
+    
+                    audioRecorderPlayer.addRecordBackListener((res) => {
+                        
+                        updateAudioData("RecordSecs", res.currentPosition);
+                        updateAudioData("RecordTime", audioRecorderPlayer.mmssss(Math.floor(res.currentPosition)))
+    
+                    })
+                }).catch((error) => {
+                    console.log(error);
                 })
-
-            }).catch((error) => {
-                console.log(error);
-            })
+            }
+           
         })
         .catch((error) => {
             console.log("error", error)
@@ -65,59 +74,90 @@ export const NotLoginHomeScreen = (props) => {
         
     }
 
-    function _handleStopRecording(){
+    function _handlePauseRecording() {
+        audioRecorderPlayer.pauseRecorder();
 
-            audioRecorderPlayer.stopRecorder().then((response) => {
+        updateAudioData("isStopping", true);
+    }
+
+    function _handleUploadRecording(){
+
+        _handlePauseRecording();
+
+            audioRecorderPlayer.stopRecorder()
+                .then((response) => {
             
-                updateAudioData("isRecording", false);
+                    audioRecorderPlayer.removeRecordBackListener();
 
-                audioRecorderPlayer.removeRecordBackListener();
-
-                MyFileUploadRequest("test.wav", "http://localhost:8081", response );
-            })
+                    MyFileUploadRequest("test.wav", "http://localhost:8081", response );
+                })
+                .catch((error) => {
+                    console.error(error);
+                    updateAudioData("isRecording", false);
+                })
             
     }
 
-    function _handleStartPlayer() {
+    function _handleDeleteRecording() {
 
-        console.log(AudioData);
+        RNFS.unlink(path).then((response) => {
 
-        if( AudioData.isPlaying === "paused") {
+            ShowToast.success("Kayıt başarıyla silindi", 2000); // Bunu stringlere yaz
 
-            audioRecorderPlayer.resumePlayer();
+            audioRecorderPlayer.stopRecorder();
+
+            updateAudioData("RecordSecs", 0);
+            updateAudioData("RecordTime", "00:00:00");
+            updateAudioData("isRecording", false);
+
+        }).catch((error) => {
+            ShowToast.error("Lütfen tekrar deneyiniz", 2000); // Bunu stringlere yaz
+        })
+
+    }
+
+    // Kaydı dinleme kısmı Detay sayfasında kullanacağım
+    // function _handleStartPlayer() {
+
+    //     console.log(AudioData);
+
+    //     if( AudioData.isPlaying === "paused") {
+
+    //         audioRecorderPlayer.resumePlayer();
             
-        } else {
-            audioRecorderPlayer.startPlayer();
+    //     } else {
+    //         audioRecorderPlayer.startPlayer();
 
-            audioRecorderPlayer.addPlayBackListener((e) => {
+    //         audioRecorderPlayer.addPlayBackListener((e) => {
 
-                if( AudioData.RecordSecs <= e.currentPosition) {
-                    audioRecorderPlayer.stopPlayer();
-                }
+    //             if( AudioData.RecordSecs <= e.currentPosition) {
+    //                 audioRecorderPlayer.stopPlayer();
+    //             }
 
-                updateAudioData("isPlaying", "started");
-                updateAudioData("CurrentSecs", e.currentPosition);
-                updateAudioData("CurrentTime", audioRecorderPlayer.mmssss(Math.floor(e.currentPosition)))
+    //             updateAudioData("isPlaying", "started");
+    //             updateAudioData("CurrentSecs", e.currentPosition);
+    //             updateAudioData("CurrentTime", audioRecorderPlayer.mmssss(Math.floor(e.currentPosition)))
 
-            })
-        }
+    //         })
+    //     }
         
-    }
+    // }
 
-    function _handlePausePlayer() {
+    // function _handlePausePlayer() {
 
-        audioRecorderPlayer.pausePlayer();
+
+    //     audioRecorderPlayer.pausePlayer();
         
-        updateAudioData("isPlaying", "paused");
+    //     updateAudioData("isPlaying", "paused");
 
-    }
+    // }
 
-    function _handleStopPlayer() {
+    // function _handleStopPlayer() {
 
-        audioRecorderPlayer.stopPlayer();
-        updateAudioData("isPlaying", "stoped");
+    //     audioRecorderPlayer.stopPlayer();
+    //     updateAudioData("isPlaying", "stoped");
 
-    }
+    // }
 
     return (
         <MyContainer
@@ -127,54 +167,17 @@ export const NotLoginHomeScreen = (props) => {
             header={true}
         >
 
-        <MyAudioContent isRecording={AudioData.isRecording} isVolume={AudioData.isVolume} />
+        <MyAudioContent isRecording={AudioData.isRecording} isVolume={AudioData.isVolume} recordTime={AudioData.RecordTime} />
 
         <MyAudioFooter 
             isRecording={AudioData.isRecording}
             isStopping={AudioData.isStopping}
-            startRecordFunc={() => {
-                updateAudioData("isRecording", true);
-
-                updateAudioData("CurrentTime", "01:44")
-                
-                setTimeout(() => {
-                    updateAudioData("isVolume", true)
-                },1000)
-
-            }}
-            pauseRecordFunc={() => updateAudioData("isStopping", true)}
-            deleteAudioFunc={() => {
-                updateAudioData("isRecording", false)
-                updateAudioData("isVolume", false)
-            }}
-            uploadAudioFunc={() => console.error("Gönderdim")}
+            startRecordFunc={_handleStartRecording}
+            pauseRecordFunc={_handlePauseRecording}
+            deleteAudioFunc={_handleDeleteRecording}
+            uploadAudioFunc={_handleUploadRecording}
 
         />
-
-            {/* <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
-
-                { AudioData.isRecording === true && <Text>{AudioData.RecordTime}</Text> }
-
-                { AudioData.isRecording === false && <Text>{AudioData.CurrentTime}</Text> }
-
-                { AudioData.isRecording === null && <MyButton size="big" buttonText={myStrings.button.start} onPress={_handleStartRecording} /> }
-
-                { AudioData.isRecording === true && <MyButton size="big" buttonText={myStrings.button.stop} onPress={_handleStopRecording} /> }
-
-                { AudioData.isRecording === false &&
-                
-                    <View>
-
-                        <MyButton size="big" buttonText={"Oynat"} onPress={_handleStartPlayer} />
-
-                        <MyButton size="big" buttonText={"Duraklat"} onPress={_handlePausePlayer} />
-
-                        <MyButton size="big" buttonText={"Durdur"} onPress={_handleStopPlayer} />
-
-                    </View>
-                }
-
-            </View> */}
 
         </MyContainer>
     );
